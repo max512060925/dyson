@@ -1,62 +1,45 @@
 <template>
-  <div id="contianer" ref="contianer">
-    <div>
-    	<pageOne ref="pageOne"></pageOne>
-			<pageTwo></pageTwo>
-    </div>
-  </div>
+	<div class="swiper-container" id="contianer" ref="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><pageOne></pageOne></div>
+			<div class="swiper-slide"><pageTwo></pageTwo></div>
+			<div class="swiper-slide"><pageThree></pageThree></div>
+			<div class="swiper-slide"><pageFour></pageFour></div>
+			<div class="swiper-slide"><pageFive></pageFive></div>
+		</div>
+	</div>
 </template>
 <script>
-import BScroll from 'better-scroll'
+// import BScroll from 'better-scroll'
+import Swiper from '../../static/js/swiper.min.js'
 import pageOne from '@/components/pageOne'
 import pageTwo from '@/components/pageTwo'
+import pageThree from '@/components/pageThree'
+import pageFour from '@/components/pageFour'
+import pageFive from '@/components/pageFive'
 export default {
   name: 'contianer',
 	components:{
 		pageOne,
-		pageTwo
-	},
-	methods:{
-		scrollPage(){
-			console.log(2);
-		},
-		handleScroll(){
-			console.log(12);
-		}
+		pageTwo,
+		pageThree,
+		pageFour,
+		pageFive
 	},
 	mounted() {
-		console.log(1);
-  },
-	created(){
-		this.$nextTick(() => {
-      this.scroll = new BScroll(this.$refs.contianer,{
-				startY: 0,
-				scrollY: true,
-				click:true
-			})
-			this.scroll.on('touchstart', (pos) => {
-				console.log(pos);
-      })
-			this.scroll.on('touchEnd', (pos) => {
-				console.log(pos);
-      })
-    })
-	},
-	destroyed () {
-	}
+		const mySwiper = new Swiper (this.$refs.swiper, {
+	    direction: 'vertical',
+	    loop: false
+  	})
+  }
 }
 </script>
-<style>
+<style lang="stylus" type="stylesheet/stylus">
 #contianer {
   position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 9.8rem;
-  max-height: 11.5rem;
-  max-width: 6.4rem;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
-  background: #000;
-  background-size: cover;
   overflow: hidden;
 }
 </style>

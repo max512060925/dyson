@@ -1,6 +1,9 @@
 <template>
   <div class="pageTwo">
 		<div class="box1" @click="jump(1)"></div>
+		<div class="box2" @click="jump(2)"></div>
+		<div class="box3" @click="jump(3)"></div>
+		<div class="box4" @click="jump(4)"></div>
 	</div>
 </template>
 
@@ -18,18 +21,20 @@ export default {
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="stylus" type="stylesheet/stylus">
+<style lang="stylus" type="stylesheet/stylus">
 .pageTwo{
 	position: relative;
 	display: flex;
-	height: 100%;
-	width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  max-height: 11.5rem;
-  max-width: 6.4rem;
-	background: url('H5-02.jpg') center center no-repeat;
-	background-size: auto 100%;
+	// height: 100%;
+	// width: 100%;
+  // height: 100%;
+	// min-height: 9.8rem;
+  // max-height: 11.5rem;
+  // max-width: 6.4rem;
+	width: 100vw;
+	height: 100vh;
+	background: url('2.jpg') center center no-repeat;
+	background-size: cover;
 	overflow: hidden;
 	.box1{
 		position: absolute;
@@ -37,6 +42,27 @@ export default {
 		left: 0;
 		width: 53%;
 		height: 29%;
+	}
+	.box2{
+		position: absolute;
+		top: 35%;
+    right: 0;
+    width: 45%;
+    height: 29%;
+	}
+	.box3{
+		position: absolute;
+		top: 35%;
+		left: 0;
+		width: 43%;
+		height: 29%;
+	}
+	.box4{
+		position: absolute;
+		top: 64%;
+    right: 0;
+    width: 55%;
+    height: 30%;
 	}
 }
 </style>

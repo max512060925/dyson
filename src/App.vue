@@ -14,7 +14,7 @@ export default {
 body{
   position: relative;
   overflow-x: hidden;
-  font-size: 2.4rem;
+  font-size: 24px;
 }
 
 </style>
