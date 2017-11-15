@@ -1,5 +1,8 @@
 <template>
   <div class="pageTwo">
+		<img src="./f1.png" class="f1">
+		<img src="./f2.png" class="f2">
+		<img src="./2-bottom.png" class="bottom">
 		<div class="box1" @click="jump(1)"></div>
 		<div class="box2" @click="jump(2)"></div>
 		<div class="box3" @click="jump(3)"></div>
@@ -25,44 +28,64 @@ export default {
 .pageTwo{
 	position: relative;
 	display: flex;
-	// height: 100%;
-	// width: 100%;
-  // height: 100%;
-	// min-height: 9.8rem;
-  // max-height: 11.5rem;
-  // max-width: 6.4rem;
 	width: 100vw;
 	height: 100vh;
-	background: url('2.jpg') center center no-repeat;
+	background: url('3.jpg') top center no-repeat;
 	background-size: cover;
 	overflow: hidden;
+	img.f1{
+		display: inline-block;
+		position: absolute;
+		width: 48vw;
+		left: 26vw;
+		top: 4vh;
+	}
+	img.f2{
+		display: inline-block;
+		position: absolute;
+		width: 78vw;
+		left: 11vw;
+		top: 20vh;
+	}
+	img.bottom{
+		display: inline-block;
+		position: absolute;
+		width: 96vw;
+		bottom: 1.5%;
+		z-index: 1;
+		left: 2vw;
+	}
 	.box1{
 		position: absolute;
-		top: 35%;
+		bottom: 35%;
 		left: 0;
 		width: 53%;
 		height: 29%;
+		z-index: 2;
 	}
 	.box2{
 		position: absolute;
-		top: 35%;
+		bottom: 35%;
     right: 0;
     width: 45%;
     height: 29%;
+		z-index: 2;
 	}
 	.box3{
 		position: absolute;
-		top: 35%;
+		bottom: 5%;
 		left: 0;
 		width: 43%;
-		height: 29%;
+		height: 31%;
+		z-index: 2;
 	}
 	.box4{
 		position: absolute;
-		top: 64%;
+		bottom: 5%;
     right: 0;
     width: 55%;
-    height: 30%;
+    height: 31%;
+		z-index: 2;
 	}
 }
 </style>

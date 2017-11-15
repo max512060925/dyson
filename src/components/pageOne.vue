@@ -1,9 +1,10 @@
 <template>
   <div class="pageOne">
-		<video src="../../static/1.mp4" autoplay controls preload></video>
+		<img src="./1-top.jpg" width="100%">
+		<video src="../../static/1.mp4" controls preload poster="../../static/img/video-loadpic.png"></video>
+		<img src="./1-bottom.jpg" width="100%">
 	</div>
 </template>
-
 <script type="text/ecmascript-6">
 export default {
   name: 'pageOne'
@@ -14,22 +15,26 @@ export default {
 <style scoped lang="stylus" type="stylesheet/stylus">
 .pageOne{
 	position: relative;
-	// height: 100%;
-	// width: 100%;
-  // height: 100%;
-	// min-height: 9.8rem;
-  // max-height: 11.5rem;
-  // max-width: 6.4rem;
 	width: 100vw;
 	height: 100vh;
-	background: url('1.jpg') center center no-repeat;
-	background-size: cover;
 	overflow: hidden;
+	img{
+		position: absolute;
+		display:inline-block;
+		z-index: 1;
+		&:first-child{
+			top: 0;
+		}
+		&:last-child{
+			bottom: 0;
+		}
+	}
 	video{
+		display:inline-block;
 		top: 54%;
 		z-index: 2;
 		position: absolute;
-		width: 100%;
+		width: 100vw;
 	}
 }
 </style>

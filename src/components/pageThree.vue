@@ -1,5 +1,6 @@
 <template>
   <div class="pageThree">
+		<img src="./3-bottom.png" width="100%">
 		<div class="box5" @click="jump(5)"></div>
 		<div class="box6" @click="jump(6)"></div>
 		<div class="box7" @click="jump(7)"></div>
@@ -24,23 +25,25 @@ export default {
 .pageThree{
 	position: relative;
 	display: flex;
-	// height: 100%;
-	// width: 100%;
-  // height: 100%;
-	// min-height: 9.8rem;
-  // max-height: 11.5rem;
-  // max-width: 6.4rem;
 	width: 100vw;
 	height: 100vh;
 	background: url('3.jpg') center center no-repeat;
 	background-size: cover;
 	overflow: hidden;
+	img{
+		display: inline-block;
+		position: absolute;
+		height: 100vh;
+		bottom: 2%;
+		z-index: 1;
+	}
 	.box5{
 		position: absolute;
 		top: 4%;
     left: 0;
     width: 100%;
     height: 30%;
+		z-index: 2;
 	}
 	.box6{
 		position: absolute;
@@ -48,6 +51,7 @@ export default {
     left: 0;
     width: 33%;
     height: 29%;
+		z-index: 2;
 	}
 	.box7{
 		position: absolute;
@@ -62,6 +66,7 @@ export default {
 		right: 0;
 		width: 33%;
 		height: 29%;
+		z-index: 2;
 	}
 	.box9{
 		position: absolute;
@@ -76,6 +81,7 @@ export default {
     right: 0;
     width: 63%;
     height: 30%;
+		z-index: 2;
 	}
 }
 </style>

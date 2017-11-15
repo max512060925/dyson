@@ -3,10 +3,11 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import '../static/js/rem';
+// import '../static/js/rem';
 import '../static/css/reset.css';
 import '../static/css/swiper.min.css';
-
+import FastClick from 'fastclick'
+FastClick.attach(document.body);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
