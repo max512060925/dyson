@@ -26,9 +26,7 @@ export default {
 	position: relative;
 	display: flex;
 	width: 640px;
-	height: 100%;
-	min-height: 980px;
-	max-height: 1150px;
+	height: 100vh;
 	background: url('3.jpg') center center no-repeat;
 	background-size: cover;
 	overflow: hidden;
@@ -36,6 +34,7 @@ export default {
 		display: inline-block;
 		position: absolute;
 		bottom: 2%;
+    width: 640px;
 		z-index: 1;
 	}
 	.box5{

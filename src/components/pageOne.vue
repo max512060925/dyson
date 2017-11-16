@@ -16,9 +16,7 @@ export default {
 .pageOne{
 	position: relative;
 	width: 640px;
-	height: 100%;
-	min-height: 980px;
-	max-height: 1150px;
+	height: 100vh;
 	overflow: hidden;
 	img{
 		position: absolute;

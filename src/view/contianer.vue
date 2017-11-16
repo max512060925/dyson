@@ -75,7 +75,7 @@ export default {
 #contianer {
   position: relative;
 	width: 640px;
-	height: 100%;
+	height: 100vh;
 	min-height: 980px;
 	max-height: 1150px;
   margin: 0 auto;

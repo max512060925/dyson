@@ -14,9 +14,7 @@ export default {
 html {
 	position: relative;
 	width: 640px;
-	height: 100%;
-	/*min-height: 980px;
-	max-height: 1150px;*/
+	height: 100vh;
 	margin: 0 auto;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-tap-highlight: rgba(0,0,0,0);
@@ -30,9 +28,7 @@ html {
 }
 body{
 	width: 640px;
-	height: 100%;
-	min-height: 980px;
-	max-height: 1150px;
+	height: 100vh;
 	margin: 0 auto;
 	padding: 0;
 	overflow: visible;
