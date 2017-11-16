@@ -22,7 +22,7 @@ export default {
 	min-height: 980px;
 	max-height: 1150px;
 	background: url('4.jpg') center center no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
 	overflow: hidden;
 	img.f3{
 		display: inline-block;
@@ -38,8 +38,8 @@ export default {
 		left: 27%;
     top: 63%;
 		opacity: 0;
-		animation:animation 5s infinite;
-		animation-delay:1.5s;
+		animation:animation 6s infinite;
+		animation-delay:2s;
 	}
 	img.m2{
 		display: inline-block;
@@ -48,8 +48,8 @@ export default {
 		left: 32%;
     top: 50%;
 		opacity: 0;
-		animation:animation 5s infinite;
-		animation-delay:3s;
+		animation:animation 6s infinite;
+		animation-delay:4s;
 	}
 	img.m3{
 		display: inline-block;
@@ -57,7 +57,7 @@ export default {
 		width: 63%;
 		left: 24%;
     top: 37%;
-		animation:animation 5s infinite;
+		animation:animation 6s infinite;
 	}
 	@keyframes animation
 	{

@@ -35,9 +35,6 @@ export default {
 	img{
 		display: inline-block;
 		position: absolute;
-		height: 100%;
-		min-height: 980px;
-		max-height: 1150px;
 		bottom: 2%;
 		z-index: 1;
 	}

@@ -26,6 +26,7 @@ export default {
 		z-index: 1;
 		&:first-child{
 			top: 0;
+      height:64%;
 		}
 		&:last-child{
 			bottom: 0;
@@ -33,7 +34,7 @@ export default {
 	}
 	video{
 		display:inline-block;
-		bottom: 14.2%;
+		bottom: 15%;
 		z-index: 2;
 		position: absolute;
 		width: 100%;
