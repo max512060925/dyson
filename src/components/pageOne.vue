@@ -50,11 +50,10 @@ export default {
     height: calc(100vh*(127/1920));
   }
 	video{
-		display:inline-block;
-		bottom: calc(100vh*(350/1920));
+		display:block;
+		top: 54.5625vh;
 		z-index: 2;
 		position: absolute;
-		// height: calc(100vh*(620/1920));
 		width: 100%;
 	}
 }
