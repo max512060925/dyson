@@ -62,7 +62,7 @@ export default {
 	    loop: false,
 			on: {
 		    slideChangeTransitionEnd(){
-					ga('send', 'event', 'touchmove', 'page', `page${this.activeIndex+1}`);
+					ga('send', 'pageview', `/page${this.activeIndex+1}`);
 		      _this.$store.commit('saveIndex',this.activeIndex);//切换结束时，告诉我现在是第几个slide
 		    },
 		  }

@@ -18,7 +18,7 @@ export default {
   },
 	methods:{
 		jump(i){
-			ga('send', 'event', 'touch', 'kol', `kol${i}`);
+			ga('send', 'pageview', `/kol${i}`);
 			this.$router.push({ path: 'pic', query: { id: i }})
 		}
 	}

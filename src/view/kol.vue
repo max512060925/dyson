@@ -20,13 +20,13 @@ export default {
 	methods: {
 		prev() {
 			if (Number(this.id)!==1) {
-				ga('send', 'event', 'touch', 'kol', `kol${Number(this.id)-1}`);
+        ga('send', 'pageview', `/kol${Number(this.id)-1}`);
 				this.$router.push({ path: 'pic', query: { id: `${Number(this.id)-1}` }})
 			}
 		},
 		next() {
 			if (Number(this.id)!==10) {
-				ga('send', 'event', 'touch', 'kol', `kol${Number(this.id)+1}`);
+        ga('send', 'pageview', `/kol${Number(this.id)+1}`);
 				this.$router.push({ path: 'pic', query: { id: `${Number(this.id)+1}` }})
 			}
 		}
