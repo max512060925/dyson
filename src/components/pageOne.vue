@@ -51,7 +51,7 @@ export default {
   }
 	video{
 		display:block;
-		top: 54.5625vh;
+		top: calc(100vh*(990/1920));
 		z-index: 2;
 		position: absolute;
 		width: 100%;
