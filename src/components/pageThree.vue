@@ -25,15 +25,19 @@ export default {
 .pageThree{
 	position: relative;
 	display: flex;
-	width: 100vw;
-	height: 100vh;
+	width: 640px;
+	height: 100%;
+	min-height: 980px;
+	max-height: 1150px;
 	background: url('3.jpg') center center no-repeat;
 	background-size: cover;
 	overflow: hidden;
 	img{
 		display: inline-block;
 		position: absolute;
-		height: 100vh;
+		height: 100%;
+		min-height: 980px;
+		max-height: 1150px;
 		bottom: 2%;
 		z-index: 1;
 	}
@@ -59,6 +63,7 @@ export default {
 		left: 35%;
 		width: 30%;
 		height: 29%;
+		z-index: 2;
 	}
 	.box8{
 		position: absolute;
@@ -74,6 +79,7 @@ export default {
     left: 0;
     width: 36%;
     height: 30%;
+		z-index: 2;
 	}
 	.box10{
 		position: absolute;

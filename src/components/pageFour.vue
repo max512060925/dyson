@@ -17,22 +17,24 @@ export default {
 .pageFour{
 	position: relative;
 	display: flex;
-	width: 100vw;
-	height: 100vh;
+	width: 640px;
+	height: 100%;
+	min-height: 980px;
+	max-height: 1150px;
 	background: url('4.jpg') center center no-repeat;
 	background-size: cover;
 	overflow: hidden;
 	img.f3{
 		display: inline-block;
 		position: absolute;
-		width: 58vw;
-		left: 17.75vw;
+		width: 58%;
+		left: 17.75%;
 		top: 5%;
 	}
 	img.m1{
 		display: inline-block;
 		position: absolute;
-		width: 63vw;
+		width: 63%;
 		left: 27%;
     top: 63%;
 		opacity: 0;
@@ -42,7 +44,7 @@ export default {
 	img.m2{
 		display: inline-block;
 		position: absolute;
-		width: 63vw;
+		width: 63%;
 		left: 32%;
     top: 50%;
 		opacity: 0;
@@ -52,7 +54,7 @@ export default {
 	img.m3{
 		display: inline-block;
 		position: absolute;
-		width: 63vw;
+		width: 63%;
 		left: 24%;
     top: 37%;
 		animation:animation 5s infinite;

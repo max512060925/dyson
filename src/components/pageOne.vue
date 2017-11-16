@@ -15,8 +15,10 @@ export default {
 <style scoped lang="stylus" type="stylesheet/stylus">
 .pageOne{
 	position: relative;
-	width: 100vw;
-	height: 100vh;
+	width: 640px;
+	height: 100%;
+	min-height: 980px;
+	max-height: 1150px;
 	overflow: hidden;
 	img{
 		position: absolute;
@@ -31,10 +33,10 @@ export default {
 	}
 	video{
 		display:inline-block;
-		top: 54%;
+		bottom: 14.2%;
 		z-index: 2;
 		position: absolute;
-		width: 100vw;
+		width: 100%;
 	}
 }
 </style>

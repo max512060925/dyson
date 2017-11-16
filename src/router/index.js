@@ -11,19 +11,16 @@ export default new Router({
     {
       path: '/',
       name: 'contianer',
-      component: contianer
+      component: contianer,
+			meta:{
+				keepAlive:true
+			}
     },
 		{
       path: '/pic',
       name: 'kol',
       component: kol,
 			props: (route) => ({ id: route.query.id.toString() })
-    },
-		// {
-		// 	path:'/pic',
-		// 	name: 'pic',
-		// 	component : pic,
-		// 	props: (route) => ({ id: route.query.id })
-		// }
+    }
   ]
 })

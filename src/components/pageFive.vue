@@ -15,23 +15,25 @@ export default {
 .pageFive{
 	position: relative;
 	display: flex;
-	width: 100vw;
-	height: 100vh;
+	width: 640px;
+	height: 100%;
+	min-height: 980px;
+	max-height: 1150px;
 	background: url('5.jpg') center center no-repeat;
 	background-size: cover;
 	overflow: hidden;
 	img.f4{
 		display: inline-block;
 		position: absolute;
-		width: 52vw;
-		left: 24vw;
+		width: 52%;
+		left: 24%;
     top: 1%;
 	}
 	img.f5{
 		display: inline-block;
 		position: absolute;
-		width: 92.6vw;
-		left: 3.7vw;
+		width: 92.6%;
+		left: 3.7%;
     bottom: 2%;
 	}
 }

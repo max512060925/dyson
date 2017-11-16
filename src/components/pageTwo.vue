@@ -28,32 +28,34 @@ export default {
 .pageTwo{
 	position: relative;
 	display: flex;
-	width: 100vw;
-	height: 100vh;
+	width: 640px;
+	height: 100%;
+	min-height: 980px;
+	max-height: 1150px;
 	background: url('3.jpg') top center no-repeat;
 	background-size: cover;
 	overflow: hidden;
 	img.f1{
 		display: inline-block;
 		position: absolute;
-		width: 48vw;
-		left: 26vw;
-		top: 4vh;
+		width: 48%;
+		left: 26%;
+		top: 4%;
 	}
 	img.f2{
 		display: inline-block;
 		position: absolute;
-		width: 78vw;
-		left: 11vw;
-		top: 20vh;
+		width: 78%;
+		left: 11%;
+		top: 20%;
 	}
 	img.bottom{
 		display: inline-block;
 		position: absolute;
-		width: 96vw;
+		width: 96%;
 		bottom: 1.5%;
 		z-index: 1;
-		left: 2vw;
+		left: 2%;
 	}
 	.box1{
 		position: absolute;
