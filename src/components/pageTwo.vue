@@ -36,55 +36,55 @@ export default {
 	img.f1{
 		display: inline-block;
 		position: absolute;
-		width: 48%;
-		left: 26%;
-		top: 4%;
+		width: 48vw;
+		left: 26vw;
+		top: 4vh;
 	}
 	img.f2{
 		display: inline-block;
 		position: absolute;
-		width: 78%;
-		left: 11%;
-		top: 20%;
+		width: 78vw;
+		left: 11vw;
+		top: 20vh;
 	}
 	img.bottom{
 		display: inline-block;
 		position: absolute;
-		width: 96%;
-		bottom: 1.5%;
+		width: 96vw;
+		bottom: 1.5vh;
 		z-index: 1;
-		left: 2%;
+		left: 2vw;
 	}
 	.box1{
 		position: absolute;
-		bottom: 35%;
+		bottom: 35vh;
 		left: 0;
-		width: 53%;
-		height: 29%;
+		width: 53vw;
+		height: 29vh;
 		z-index: 2;
 	}
 	.box2{
 		position: absolute;
-		bottom: 35%;
-    right: 0;
-    width: 45%;
-    height: 29%;
+		bottom: 35vh;
+	    right: 0;
+	    width: 45vw;
+	    height: 29vh;
 		z-index: 2;
 	}
 	.box3{
 		position: absolute;
-		bottom: 5%;
+		bottom: 5vh;
 		left: 0;
-		width: 43%;
-		height: 31%;
+		width: 43vw;
+		height: 31vh;
 		z-index: 2;
 	}
 	.box4{
 		position: absolute;
-		bottom: 5%;
-    right: 0;
-    width: 55%;
-    height: 31%;
+		bottom: 5vh;
+	    right: 0;
+	    width: 55vw;
+	    height: 31vh;
 		z-index: 2;
 	}
 }

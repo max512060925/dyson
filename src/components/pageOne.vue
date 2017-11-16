@@ -24,15 +24,16 @@ export default {
 		z-index: 1;
 		&:first-child{
 			top: 0;
-      height:64%;
+      		height:64vh;
 		}
 		&:last-child{
 			bottom: 0;
+			height:14vh;
 		}
 	}
 	video{
 		display:inline-block;
-		bottom: 15%;
+		bottom: 12%;
 		z-index: 2;
 		position: absolute;
 		width: 100%;

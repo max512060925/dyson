@@ -33,56 +33,56 @@ export default {
 	img{
 		display: inline-block;
 		position: absolute;
-		bottom: 2%;
-    width: 640px;
+		bottom: 2vh;
+    	width: 640px;
 		z-index: 1;
 	}
 	.box5{
 		position: absolute;
-		top: 4%;
-    left: 0;
-    width: 100%;
-    height: 30%;
+		top: 4vh;
+	    left: 0;
+	    width: 640px;
+	    height: 30vh;
 		z-index: 2;
 	}
 	.box6{
 		position: absolute;
-		top: 34%;
-    left: 0;
-    width: 33%;
-    height: 29%;
+		top: 34vh;
+	    left: 0;
+	    width: 33vw;
+	    height: 29vh;
 		z-index: 2;
 	}
 	.box7{
 		position: absolute;
-		top: 34%;
-		left: 35%;
-		width: 30%;
-		height: 29%;
+		top: 34vh;
+		left: 35vw;
+		width: 30vw;
+		height: 29vh;
 		z-index: 2;
 	}
 	.box8{
 		position: absolute;
-		top: 34%;
+		top: 34vh;
 		right: 0;
-		width: 33%;
-		height: 29%;
+		width: 33vw;
+		height: 29vh;
 		z-index: 2;
 	}
 	.box9{
 		position: absolute;
-		top: 63.7%;
-    left: 0;
-    width: 36%;
-    height: 30%;
+		top: 63.7vh;
+	    left: 0;
+	    width: 36vw;
+	    height: 30vh;
 		z-index: 2;
 	}
 	.box10{
 		position: absolute;
-		top: 63.7%;
-    right: 0;
-    width: 63%;
-    height: 30%;
+		top: 63.7vh;
+	    right: 0;
+	    width: 63vw;
+	    height: 30vh;
 		z-index: 2;
 	}
 }

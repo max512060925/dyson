@@ -4,6 +4,7 @@
 		<img src="./m1.png" class="m1">
 		<img src="./m2.png" class="m2">
 		<img src="./m3.png" class="m3">
+    	<div id="triangle-facing-bottom"></div>
 	</div>
 </template>
 
@@ -22,19 +23,26 @@ export default {
 	background: url('4.jpg') center center no-repeat;
 	background-size: 100% 100%;
 	overflow: hidden;
+  #triangle-facing-bottom {
+    width:640px;
+    height:100vh;
+    bottom:0;
+    position: absolute;
+    background: url('a.png') center center no-repeat;
+  }
 	img.f3{
 		display: inline-block;
 		position: absolute;
-		width: 58%;
-		left: 17.75%;
-		top: 5%;
+		width: 58vw;
+		left: 17.75vw;
+		top: 5vh;
 	}
 	img.m1{
 		display: inline-block;
 		position: absolute;
-		width: 63%;
-		left: 27%;
-    top: 63%;
+		width: 63vw;
+		left: 27vw;
+    	top: 63vh;
 		opacity: 0;
 		animation:animation 6s infinite;
 		animation-delay:2s;
@@ -42,9 +50,9 @@ export default {
 	img.m2{
 		display: inline-block;
 		position: absolute;
-		width: 63%;
-		left: 32%;
-    top: 50%;
+		width: 63vw;
+		left: 32vw;
+    top: 50vh;
 		opacity: 0;
 		animation:animation 6s infinite;
 		animation-delay:4s;
@@ -52,9 +60,9 @@ export default {
 	img.m3{
 		display: inline-block;
 		position: absolute;
-		width: 63%;
-		left: 24%;
-    top: 37%;
+		width: 63vw;
+		left: 24vw;
+    	top: 37vh;
 		animation:animation 6s infinite;
 	}
 	@keyframes animation
