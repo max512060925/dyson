@@ -1,22 +1,22 @@
 <template>
-	<div class="main">
-		<div v-if="mobile" class="swiper-container" id="contianer" ref="swiper">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide"><pageOne></pageOne></div>
-				<div class="swiper-slide"><pageTwo></pageTwo></div>
-				<div class="swiper-slide"><pageThree></pageThree></div>
-				<div class="swiper-slide"><pageFour></pageFour></div>
-				<div class="swiper-slide"><pageFive></pageFive></div>
+		<div class="main">
+			<div v-if="mobile" class="swiper-container" id="contianer" ref="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><pageOne></pageOne></div>
+					<div class="swiper-slide"><pageTwo></pageTwo></div>
+					<div class="swiper-slide"><pageThree></pageThree></div>
+					<div class="swiper-slide"><pageFour></pageFour></div>
+					<div class="swiper-slide"><pageFive></pageFive></div>
+				</div>
+			</div>
+			<div v-else>
+				<pageOne style="height:1139px;"></pageOne>
+				<pageTwo style="height:1139px;"></pageTwo>
+				<pageThree style="height:1139px;"></pageThree>
+				<pageFour style="height:1139px;"></pageFour>
+				<pageFive style="height:1139px;"></pageFive>
 			</div>
 		</div>
-		<div v-else>
-			<pageOne style="height:1139px;"></pageOne>
-			<pageTwo style="height:1139px;"></pageTwo>
-			<pageThree style="height:1139px;"></pageThree>
-			<pageFour style="height:1139px;"></pageFour>
-			<pageFive style="height:1139px;"></pageFive>
-		</div>
-	</div>
 </template>
 <script>
 // import BScroll from 'better-scroll'

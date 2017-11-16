@@ -1,8 +1,8 @@
 <template>
-  <div class="pageTwo" v-lazy:background-image="'src/components/3.jpg'">
-		<img v-lazy="'src/components/f1.png'" class="f1"/>
-		<img v-lazy="'src/components/f2.png'" class="f2"/>
-		<img v-lazy="'src/components/2-bottom.png'" class="bottom"/>
+  <div class="pageTwo" v-lazy:background-image="'/static/img/3.jpg'">
+		<img v-lazy="'/static/img/f1.png'" class="f1"/>
+		<img v-lazy="'/static/img/f2.png'" class="f2"/>
+		<img v-lazy="'/static/img/2-bottom.png'" class="bottom"/>
 		<div class="box1" @click="jump(1)"></div>
 		<div class="box2" @click="jump(2)"></div>
 		<div class="box3" @click="jump(3)"></div>

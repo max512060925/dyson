@@ -1,7 +1,7 @@
 <template>
-<div class="pageFive" v-lazy:background-image="'src/components/5.jpg'">
-	<img v-lazy="'src/components/f4.png'" class="f4">
-	<img v-lazy="'src/components/f5.png'" class="f5">
+<div class="pageFive" v-lazy:background-image="'/static/img/5.jpg'">
+	<img v-lazy="'/static/img/f4.png'" class="f4">
+	<img v-lazy="'/static/img/f5.png'" class="f5">
 </div>
 </template>
 

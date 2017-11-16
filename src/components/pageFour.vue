@@ -1,8 +1,8 @@
 <template>
-  <div class="pageFour" v-lazy:background-image="'src/components/4.jpg'">
-		<img v-lazy="'src/components/f3.png'" class="f3"/>
-		<img v-for="(item,i) in imgArr" :class="{'show':number===i}" :key="i" v-lazy="item.url" class="list-item" :style="`top:${item.top||0};left:${item.left||0};`"/>
-		<img v-lazy="'src/components/arrow.png'" class="arrow"/>
+  <div class="pageFour" v-lazy:background-image="'/static/img/4.jpg'">
+		<img v-lazy="'/static/img/f3.png'" class="f3"/>
+		<img v-if="imgArr.length>0" v-for="(item,i) in imgArr" :class="{'show':number===i}" :key="i" v-lazy="item.url" class="list-item" :style="`top:${item.top||0};left:${item.left||0};`"/>
+		<img v-lazy="'/static/img/arrow.png'" class="arrow"/>
 	</div>
 </template>
 <script type="text/ecmascript-6">
@@ -13,7 +13,8 @@ export default {
 		return {
 			imgArr:imgJson.imgArr,
 			interval:null,
-			number:0
+			number:0,
+      imgStyle:[]
 		}
 	},
 	methods: {
@@ -22,6 +23,7 @@ export default {
     }
   },
 	mounted(){
+    console.log(imgJson.imgArr[0].top);
 		this.interval=setInterval(()=>{
 			if (this.number===this.randomIndex()) {
 				if (this.randomIndex()===this.imgArr.length) {

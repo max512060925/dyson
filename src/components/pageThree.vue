@@ -1,6 +1,6 @@
 <template>
-  <div class="pageThree" v-lazy:background-image="'src/components/3.jpg'">
-		<img v-lazy="'src/components/3-bottom.png'" class="bottom">
+  <div class="pageThree" v-lazy:background-image="'/static/img/3.jpg'">
+		<img v-lazy="'/static/img/3-bottom.png'" class="bottom">
 		<div class="box5" @click="jump(5)"></div>
 		<div class="box6" @click="jump(6)"></div>
 		<div class="box7" @click="jump(7)"></div>

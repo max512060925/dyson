@@ -1,9 +1,9 @@
 <template>
-  <div class="pageOne" v-lazy:background-image="'src/components/1.jpg'">
-    <img v-lazy="'src/components/logo.png'" class="logo"/>
-    <img v-lazy="'src/components/f6.png'" class="f6"/>
-    <img v-lazy="'src/components/f7.png'" class="f7"/>
-	  <video src="../../static/1.mp4" controls preload poster="../../static/img/video-loadpic.png"></video>
+  <div class="pageOne" v-lazy:background-image="'/static/img/1.jpg'">
+    <img v-lazy="'/static/img/logo.png'" class="logo"/>
+    <img v-lazy="'/static/img/f6.png'" class="f6"/>
+    <img v-lazy="'/static/img/f7.png'" class="f7"/>
+	  <video src="/static/1.mp4" controls preload poster="/static/img/video-loadpic.png"></video>
 	</div>
 </template>
 <script type="text/ecmascript-6">
