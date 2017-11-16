@@ -1,6 +1,6 @@
 <template>
-  <div class="pageThree">
-		<img src="./3-bottom.png" width="100%">
+  <div class="pageThree" v-lazy:background-image="'src/components/3.jpg'">
+		<img v-lazy="'src/components/3-bottom.png'" class="bottom">
 		<div class="box5" @click="jump(5)"></div>
 		<div class="box6" @click="jump(6)"></div>
 		<div class="box7" @click="jump(7)"></div>
@@ -15,6 +15,7 @@ export default {
   name: 'pageThree',
 	methods:{
 		jump(i){
+			ga('send', 'event', 'touch', 'kol', `kol${i}`);
 			this.$router.push({ path: 'pic', query: { id: i }})
 		}
 	}
@@ -27,14 +28,18 @@ export default {
 	display: flex;
 	width: 640px;
 	height: 100vh;
-	background: url('3.jpg') center center no-repeat;
-	background-size: cover;
+	background-size:cover;
+  background-position:bottom center;
+  background-repeat:no-repeat;
 	overflow: hidden;
 	img{
-		display: inline-block;
-		position: absolute;
-		bottom: 2vh;
-    	width: 640px;
+		position:absolute;
+    display:block;
+    bottom:calc(100vh*(25/1920));
+    left: 50vw;
+    margin-left:calc(-100vh*(1080/1920)/2);
+    width: calc(100vh*(1080/1920));
+    height: calc(100vh*(1920/1920));
 		z-index: 1;
 	}
 	.box5{
@@ -72,17 +77,17 @@ export default {
 	.box9{
 		position: absolute;
 		top: 63.7vh;
-	    left: 0;
-	    width: 36vw;
-	    height: 30vh;
+		left: 0;
+		width: 43vw;
+		height: 30vh;
 		z-index: 2;
 	}
 	.box10{
 		position: absolute;
 		top: 63.7vh;
-	    right: 0;
-	    width: 63vw;
-	    height: 30vh;
+		right: 0;
+		width: 57vw;
+		height: 30vh;
 		z-index: 2;
 	}
 }

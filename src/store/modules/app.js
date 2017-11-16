@@ -5,7 +5,7 @@ const app = {
   },
   mutations: {
     saveIndex: (state, i) => {
-      state.state=i
+      state.index=i
     }
   }
 };

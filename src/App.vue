@@ -17,7 +17,7 @@ export default {
 @media all and (orientation: portrait){
   html {
   	position: relative;
-  	width: 640px;
+  	width: 100%;
   	height: 100vh;
   	margin: 0 auto;
   	-webkit-tap-highlight-color: rgba(0,0,0,0);

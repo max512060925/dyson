@@ -1,0 +1,19 @@
+{
+	"imgArr":[
+		{
+			"url":"http://dyson2017.test.oookini.com/static/m1.png",
+			"left":"'27vw'",
+			"top":"'63vh'"
+		},
+		{
+			"url":"http://dyson2017.test.oookini.com/static/m2.png",
+			"left":"'32vw'",
+			"top":"'50vh'"
+		},
+		{
+			"url":"http://dyson2017.test.oookini.com/static/m3.png",
+			"left":"'24vw'",
+			"top":"'37vh'"
+		}
+	]
+}

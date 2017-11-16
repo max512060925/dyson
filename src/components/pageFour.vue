@@ -1,16 +1,42 @@
 <template>
-  <div class="pageFour">
-		<img src="./f3.png" class="f3">
-		<img src="./m1.png" class="m1">
-		<img src="./m2.png" class="m2">
-		<img src="./m3.png" class="m3">
-    	<div id="triangle-facing-bottom"></div>
+  <div class="pageFour" v-lazy:background-image="'src/components/4.jpg'">
+		<img v-lazy="'src/components/f3.png'" class="f3"/>
+		<img v-for="(item,i) in imgArr" :class="{'show':number===i}" :key="i" v-lazy="item.url" class="list-item" :style="`top:${item.top||0};left:${item.left||0};`"/>
+		<img v-lazy="'src/components/arrow.png'" class="arrow"/>
 	</div>
 </template>
-
 <script type="text/ecmascript-6">
+import imgJson from '../../static/json/img.json'
 export default {
-  name: 'pageFour'
+  name: 'pageFour',
+	data() {
+		return {
+			imgArr:imgJson.imgArr,
+			interval:null,
+			number:0
+		}
+	},
+	methods: {
+    randomIndex() {
+      return Math.floor(Math.random() * this.imgArr.length)
+    }
+  },
+	mounted(){
+		this.interval=setInterval(()=>{
+			if (this.number===this.randomIndex()) {
+				if (this.randomIndex()===this.imgArr.length) {
+					this.number=this.randomIndex()-1
+				}else{
+					this.number=this.randomIndex()+1
+				}
+			}else {
+				this.number=this.randomIndex()
+			}
+		},3000)
+	},
+	distroy() {
+		clearInterval(this.interval)
+	}
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -20,50 +46,39 @@ export default {
 	display: flex;
 	width: 640px;
 	height: 100vh;
-	background: url('4.jpg') center center no-repeat;
-	background-size: 100% 100%;
+	background-size:cover;
+  background-position:bottom center;
+  background-repeat:no-repeat;
 	overflow: hidden;
-  #triangle-facing-bottom {
-    width:640px;
-    height:100vh;
-    bottom:0;
-    position: absolute;
-    background: url('a.png') center center no-repeat;
-  }
 	img.f3{
-		display: inline-block;
-		position: absolute;
-		width: 58vw;
-		left: 17.75vw;
-		top: 5vh;
+		position:absolute;
+    display:block;
+    top:calc(100vh*(85/1920));
+    left: 50vw;
+    margin-left:calc(-100vh*(629/1920)/2);
+    width: calc(100vh*(629/1920));
+    height: calc(100vh*(212/1920));
 	}
-	img.m1{
-		display: inline-block;
+	img.arrow{
+		position:absolute;
+    display:block;
+    bottom:calc(100vh*(25/1920));
+    left: 50vw;
+    margin-left:calc(-100vh*(83/1920)/2);
+    width: calc(100vh*(83/1920));
+    height: calc(100vh*(32/1920));
+	}
+	.list-item{
+		display: block;
 		position: absolute;
-		width: 63vw;
-		left: 27vw;
-    	top: 63vh;
+		z-index: 2;
+		width: calc(100vh*(669/1920));
+    height: calc(100vh*(196/1920));
 		opacity: 0;
-		animation:animation 6s infinite;
-		animation-delay:2s;
+		transition: all 6s;
 	}
-	img.m2{
-		display: inline-block;
-		position: absolute;
-		width: 63vw;
-		left: 32vw;
-    top: 50vh;
-		opacity: 0;
-		animation:animation 6s infinite;
-		animation-delay:4s;
-	}
-	img.m3{
-		display: inline-block;
-		position: absolute;
-		width: 63vw;
-		left: 24vw;
-    	top: 37vh;
-		animation:animation 6s infinite;
+	.show {
+		opacity: 1;
 	}
 	@keyframes animation
 	{

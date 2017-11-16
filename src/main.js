@@ -3,14 +3,13 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-// import store from './store';
+import store from './store';
 // import '../static/js/rem';
 import '../static/css/reset.css';
 import '../static/css/swiper.min.css';
-import Vuex from 'vuex'
+import VueLazyload from 'vue-lazyload'
 
-
-
+Vue.use(VueLazyload)
 import FastClick from 'fastclick'
 FastClick.attach(document.body);
 Vue.config.productionTip = false
@@ -20,7 +19,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-	// store,
+	store,
   template: '<App/>',
   components: { App }
 })

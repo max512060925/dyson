@@ -1,8 +1,8 @@
 <template>
-  <div class="pageTwo">
-		<img src="./f1.png" class="f1">
-		<img src="./f2.png" class="f2">
-		<img src="./2-bottom.png" class="bottom">
+  <div class="pageTwo" v-lazy:background-image="'src/components/3.jpg'">
+		<img v-lazy="'src/components/f1.png'" class="f1"/>
+		<img v-lazy="'src/components/f2.png'" class="f2"/>
+		<img v-lazy="'src/components/2-bottom.png'" class="bottom"/>
 		<div class="box1" @click="jump(1)"></div>
 		<div class="box2" @click="jump(2)"></div>
 		<div class="box3" @click="jump(3)"></div>
@@ -18,6 +18,7 @@ export default {
   },
 	methods:{
 		jump(i){
+			ga('send', 'event', 'touch', 'kol', `kol${i}`);
 			this.$router.push({ path: 'pic', query: { id: i }})
 		}
 	}
@@ -30,30 +31,37 @@ export default {
 	display: flex;
 	width: 640px;
 	height: 100vh;
-	background: url('3.jpg') top center no-repeat;
-	background-size: cover;
+	background-size:cover;
+	background-position:bottom center;
+	background-repeat:no-repeat;
 	overflow: hidden;
 	img.f1{
-		display: inline-block;
-		position: absolute;
-		width: 48vw;
-		left: 26vw;
-		top: 4vh;
+		position:absolute;
+    display:block;
+    top:calc(100vh*(100/1920));
+    left: 50vw;
+    margin-left:calc(-100vh*(536/1920)/2);
+    width: calc(100vh*(536/1920));
+    height: calc(100vh*(194/1920));
 	}
 	img.f2{
-		display: inline-block;
-		position: absolute;
-		width: 78vw;
-		left: 11vw;
-		top: 20vh;
+		position:absolute;
+    display:block;
+    top:calc(100vh*(437/1920));
+    left: 50vw;
+    margin-left:calc(-100vh*(862/1920)/2);
+    width: calc(100vh*(862/1920));
+    height: calc(100vh*(127/1920));
 	}
 	img.bottom{
-		display: inline-block;
-		position: absolute;
-		width: 96vw;
-		bottom: 1.5vh;
+		position:absolute;
+    display:block;
+    bottom:calc(100vh*(25/1920));
+    left: 50vw;
+    margin-left:calc(-100vh*(1053/1920)/2);
+    width: calc(100vh*(1053/1920));
+    height: calc(100vh*(1212/1920));
 		z-index: 1;
-		left: 2vw;
 	}
 	.box1{
 		position: absolute;
