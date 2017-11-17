@@ -6,12 +6,12 @@
 	</div>
 </template>
 <script type="text/ecmascript-6">
-import imgJson from '../../static/json/img.json'
+import axios from 'axios'
 export default {
   name: 'pageFour',
 	data() {
 		return {
-			imgArr:imgJson.imgArr,
+			imgArr:[],
 			interval:null,
 			number:0,
       imgStyle:[]
@@ -22,8 +22,14 @@ export default {
       return Math.floor(Math.random() * this.imgArr.length)
     }
   },
+  created() {
+    axios.get('/static/json/img.json').then(res=>{
+      if (res) {
+        this.imgArr=res.data.imgArr
+      }
+    })
+  },
 	mounted(){
-    console.log(imgJson.imgArr[0].top);
 		this.interval=setInterval(()=>{
 			if (this.number===this.randomIndex()) {
 				if (this.randomIndex()===this.imgArr.length) {
@@ -77,7 +83,7 @@ export default {
 		width: calc(100vh*(669/1920));
     height: calc(100vh*(196/1920));
 		opacity: 0;
-		transition: all 6s;
+		transition: all 4s;
 	}
 	.show {
 		opacity: 1;

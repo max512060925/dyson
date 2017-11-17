@@ -29,6 +29,7 @@ export default {
   	-webkit-font-smoothing: antialiased;
   	-webkit-touch-callout: inherit;
   	-webkit-user-select: none;
+    font-size: 10px;
   	font-family: "SimHei", "Heiti SC", "微软雅黑", "Microsoft YaHei", "黑体";
   	overflow: hidden;
   }
