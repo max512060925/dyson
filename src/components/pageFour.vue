@@ -22,25 +22,23 @@ export default {
       return Math.floor(Math.random() * this.imgArr.length)
     }
   },
-  created() {
+	mounted(){
     axios.get('/static/json/img.json').then(res=>{
       if (res) {
         this.imgArr=res.data.imgArr
+        this.interval=setInterval(()=>{
+    			if (this.number===this.randomIndex()) {
+    				if (this.randomIndex()===this.imgArr.length) {
+    					this.number=this.randomIndex()-1
+    				}else{
+    					this.number=this.randomIndex()+1
+    				}
+    			}else {
+    				this.number=this.randomIndex()
+    			}
+    		},3000)
       }
     })
-  },
-	mounted(){
-		this.interval=setInterval(()=>{
-			if (this.number===this.randomIndex()) {
-				if (this.randomIndex()===this.imgArr.length) {
-					this.number=this.randomIndex()-1
-				}else{
-					this.number=this.randomIndex()+1
-				}
-			}else {
-				this.number=this.randomIndex()
-			}
-		},3000)
 	},
 	distroy() {
 		clearInterval(this.interval)
