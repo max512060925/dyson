@@ -3,18 +3,33 @@
     <keep-alive>
       <router-view/>
     </keep-alive>
+    <div id="bottom-fixed"> </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  created() {
+    for (var i = 1; i < 11; i++) {
+      let img = new Image()
+      img.src = `/static/img/Dyson_KOL_${i}.jpg`
+    }
+  }
 }
 </script>
 
 <style>
 #app{
   display: none;
+}
+#bottom-fixed{
+  position: fixed;
+  bottom: 0;
+  background: transparent;
+  z-index: 9999;
+  width: 100vw;
+  height: 5vh;
 }
 @media all and (orientation: portrait){
   html {
@@ -33,7 +48,7 @@ export default {
   	overflow: hidden;
   }
   body{
-  	width: 640px;
+  	width: 100vw;
   	height: 100vh;
   	margin: 0 auto;
   	padding: 0;
@@ -41,6 +56,8 @@ export default {
   }
   #app{
     display: block;
+    width: 100vw;
+  	height: 100vh;
   }
 }
 @media all and (orientation: landscape){

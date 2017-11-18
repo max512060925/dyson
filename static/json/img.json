@@ -1,19 +1,25 @@
 {
 	"imgArr":[
-		{
+		[{
 			"url":"http://dyson2017.test.oookini.com/static/img/m1.png",
-			"left":"27vw",
-			"top":"63vh"
-		},
-		{
+			"left":"20vw",
+			"top":"63vh",
+			"side":"left",
+			"text":"有了戴森空气净化器, <br/>宝宝每天都呼吸新鲜空气"
+		}],
+		[{
 			"url":"http://dyson2017.test.oookini.com/static/img/m2.png",
-			"left":"32vw",
-			"top":"50vh"
-		},
-		{
+			"left":"28vw",
+			"top":"50vh",
+			"side":"right",
+			"text":"有了戴森空气净化器, <br/>宝宝每天都呼吸新鲜空气"
+		}],
+		[{
 			"url":"http://dyson2017.test.oookini.com/static/img/m3.png",
-			"left":"24vw",
-			"top":"37vh"
-		}
+			"left":"20vw",
+			"top":"37vh",
+			"side":"left",
+			"text":"有了戴森空气净化器, <br/>宝宝每天都呼吸新鲜空气"
+		}]
 	]
 }

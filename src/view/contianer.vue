@@ -1,22 +1,13 @@
 <template>
-		<div class="main">
-			<div v-if="mobile" class="swiper-container" id="contianer" ref="swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><pageOne></pageOne></div>
-					<div class="swiper-slide"><pageTwo></pageTwo></div>
-					<div class="swiper-slide"><pageThree></pageThree></div>
-					<div class="swiper-slide"><pageFour></pageFour></div>
-					<div class="swiper-slide"><pageFive></pageFive></div>
-				</div>
-			</div>
-			<div v-else>
-				<pageOne style="height:1139px;"></pageOne>
-				<pageTwo style="height:1139px;"></pageTwo>
-				<pageThree style="height:1139px;"></pageThree>
-				<pageFour style="height:1139px;"></pageFour>
-				<pageFive style="height:1139px;"></pageFive>
-			</div>
+	<div class="swiper-container" id="contianer" ref="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><pageOne></pageOne></div>
+			<div class="swiper-slide"><pageTwo></pageTwo></div>
+			<div class="swiper-slide"><pageThree></pageThree></div>
+			<div class="swiper-slide"><pageFour></pageFour></div>
+			<div class="swiper-slide"><pageFive></pageFive></div>
 		</div>
+	</div>
 </template>
 <script>
 // import BScroll from 'better-scroll'
@@ -36,30 +27,15 @@ export default {
 		pageFive
 	},
 	computed:{
-		mobile() {
-			if (!this.IsPC()&&document.documentElement.clientWidth<document.documentElement.clientHeight) {
-				return true
-			}else {
-				return false
-			}
-		}
 	},
 	methods:{
-		IsPC() {
-			let userAgentInfo = navigator.userAgent;
-			let Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
-			let flag = true;
-			for (var v = 0; v < Agents.length; v++) {
-				if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
-			}
-			return flag;
-		}
 	},
 	mounted() {
 		let _this=this;
 		const mySwiper = new Swiper (this.$refs.swiper, {
 	    direction: 'vertical',
 	    loop: false,
+			setWrapperSize:true,
 			on: {
 		    slideChangeTransitionEnd(){
 					ga('send', 'pageview', `/page${this.activeIndex+1}`);
@@ -74,11 +50,18 @@ export default {
 <style lang="stylus" type="stylesheet/stylus">
 #contianer {
   position: relative;
-	width: 640px;
+	width: 100vw;
 	height: 100vh;
-	min-height: 980px;
-	max-height: 1150px;
   margin: 0 auto;
   overflow: hidden;
+}
+img.arrow{
+	position:absolute;
+	display:block;
+	bottom:calc(100vh*(25/1920));
+	left: 50vw;
+	margin-left:calc(-100vh*(83/1920)/2);
+	width: calc(100vh*(83/1920));
+	height: calc(100vh*(32/1920));
 }
 </style>

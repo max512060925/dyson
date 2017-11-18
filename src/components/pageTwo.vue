@@ -1,12 +1,14 @@
 <template>
-  <div class="pageTwo" v-lazy:background-image="'/static/img/3.jpg'">
-		<img v-lazy="'/static/img/f1.png'" class="f1"/>
-		<img v-lazy="'/static/img/f2.png'" class="f2"/>
-		<img v-lazy="'/static/img/2-bottom.png'" class="bottom"/>
-		<div class="box1" @click="jump(1)"></div>
-		<div class="box2" @click="jump(2)"></div>
-		<div class="box3" @click="jump(3)"></div>
-		<div class="box4" @click="jump(4)"></div>
+  <div class="pageTwo" v-lazy:background-image="'/static/img/bg.jpg'">
+		<img v-lazy="'/static/img/f4.png'" class="f4"/>
+		<img v-lazy="'/static/img/f5.png'" class="f5"/>
+    <img v-lazy="'/static/img/arrow.png'" class="arrow"/>
+    <div class="p1" v-lazy:background-image="'/static/img/1.png'">
+      <div class="box1" @click="jump(1)"></div>
+  		<div class="box2" @click="jump(2)"></div>
+  		<div class="box3" @click="jump(3)"></div>
+  		<div class="box4" @click="jump(4)"></div>
+    </div>
 	</div>
 </template>
 
@@ -29,13 +31,13 @@ export default {
 .pageTwo{
 	position: relative;
 	display: flex;
-	width: 640px;
+	width: 100vw;
 	height: 100vh;
 	background-size:cover;
 	background-position:bottom center;
 	background-repeat:no-repeat;
 	overflow: hidden;
-	img.f1{
+	img.f4{
 		position:absolute;
     display:block;
     top:calc(100vh*(100/1920));
@@ -44,55 +46,58 @@ export default {
     width: calc(100vh*(536/1920));
     height: calc(100vh*(194/1920));
 	}
-	img.f2{
+	img.f5{
 		position:absolute;
     display:block;
-    top:calc(100vh*(437/1920));
+    top:calc(100vh*(450/1920));
     left: 50vw;
     margin-left:calc(-100vh*(862/1920)/2);
     width: calc(100vh*(862/1920));
     height: calc(100vh*(127/1920));
+
 	}
-	img.bottom{
+  div.p1{
 		position:absolute;
-    display:block;
-    bottom:calc(100vh*(25/1920));
+    bottom:5%;
     left: 50vw;
-    margin-left:calc(-100vh*(1053/1920)/2);
-    width: calc(100vh*(1053/1920));
-    height: calc(100vh*(1212/1920));
-		z-index: 1;
+    margin-left : calc(-100vh*(1080/1920)/2);
+    width: calc(100vh*(1080/1920));
+    height: calc(100vh*(1131/1920));
+    // height: calc(100vw*(1131/1080));
+    background-size:cover;
+  	background-position:bottom center;
+  	background-repeat:no-repeat;
 	}
 	.box1{
 		position: absolute;
-		bottom: 35vh;
-		left: 0;
-		width: 53vw;
-		height: 29vh;
+    top: 0;
+    left: 0;
+    width: 53%;
+    height: 47%;
 		z-index: 2;
 	}
 	.box2{
 		position: absolute;
-		bottom: 35vh;
-	    right: 0;
-	    width: 45vw;
-	    height: 29vh;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 47%;
 		z-index: 2;
 	}
 	.box3{
 		position: absolute;
-		bottom: 5vh;
-		left: 0;
-		width: 43vw;
-		height: 31vh;
+    bottom: 0;
+    left: 0;
+    width: 43%;
+    height: 51%;
 		z-index: 2;
 	}
 	.box4{
 		position: absolute;
-		bottom: 5vh;
-	    right: 0;
-	    width: 55vw;
-	    height: 31vh;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 48%;
 		z-index: 2;
 	}
 }
