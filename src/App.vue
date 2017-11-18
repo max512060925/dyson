@@ -9,13 +9,7 @@
 
 <script>
 export default {
-  name: 'app',
-  created() {
-    for (var i = 1; i < 11; i++) {
-      let img = new Image()
-      img.src = `/static/img/Dyson_KOL_${i}.jpg`
-    }
-  }
+  name: 'app'
 }
 </script>
 

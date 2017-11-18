@@ -46,7 +46,15 @@ export default {
   	background-position:bottom center;
   	background-repeat:no-repeat;
 	}
-	.box5{
+  .box5{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 31%;
+    z-index: 2;
+  }
+	.box6{
 		position: absolute;
     top: 33%;
     left: 0;
@@ -54,19 +62,11 @@ export default {
     height: 32%;
 		z-index: 2;
 	}
-	.box6{
+	.box7{
 		position: absolute;
     top: 33%;
     left: 34%;
     width: 31%;
-    height: 32%;
-		z-index: 2;
-	}
-	.box7{
-		position: absolute;
-    top: 33%;
-    right: 0;
-    width: 33%;
     height: 32%;
 		z-index: 2;
 	}
