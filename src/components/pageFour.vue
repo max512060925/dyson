@@ -174,11 +174,5 @@ export default {
   .show{
     opacity:1;
   }
-	// @keyframes animation
-	// {
-	// 	0% {opacity:0;}
-	// 	50% {opacity:1;}
-	// 	100% {opacity:0;}
-	// }
 }
 </style>
