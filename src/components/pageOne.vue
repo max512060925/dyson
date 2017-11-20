@@ -4,12 +4,57 @@
     <img v-lazy="'/static/img/f2.png'" class="f2"/>
     <img v-lazy="'/static/img/f1.png'" class="f1"/>
     <img v-lazy="'/static/img/arrow.png'" class="arrow"/>
-	  <video src="/static/1.mp4" autopaly preload poster="/static/img/video-loadpic.png"></video>
+	  <video id="video" src="/static/1.mp4" poster="/static/img/video-loadpic.png" @click="play" @touchEnd="play"></video>
+    <div class="play" @click="play" @touchEnd="play" v-show="!isPlay"></div>
 	</div>
 </template>
 <script type="text/ecmascript-6">
 export default {
-  name: 'pageOne'
+  name: 'pageOne',
+  data(){
+    return {
+      isPlay:true
+    }
+  },
+  methods:{
+    play(){
+      if (video.paused) {
+        this.isPlay=true
+        video.play()
+      }else {
+        this.isPlay=false
+        video.pause()
+      }
+    }
+  },
+  mounted() {
+    let img
+		img = new Image()
+		img.src = '/static/img/1.png'
+		img.src = '/static/img/2.png'
+		img.src = '/static/img/map.png'
+		img.src = '/static/img/f3.png'
+		img.src = '/static/img/f4.png'
+		img.src = '/static/img/f5.png'
+		img.src = '/static/img/f6.png'
+		img.src = '/static/img/f7.png'
+		img.src = '/static/img/f8.png'
+		img.src = '/static/img/f9.png'
+		img.src = '/static/img/f10.png'
+		img.src = '/static/img/f11.png'
+		img.src = '/static/img/f12.png'
+		img.src = '/static/img/f13.png'
+		img.src = '/static/img/fb.png'
+		img.src = '/static/img/bear.png'
+		if (this.activeIndex===1) {
+			for (var i = 1; i < 11; i++) {
+				img = new Image()
+				img.src = `/static/img/Dyson_KOL_${i}.jpg`
+			}
+		}
+    console.log();
+  }
+
 }
 </script>
 
@@ -52,10 +97,23 @@ export default {
   }
 	video{
 		display:block;
-		top: calc(100vh*(700/1920));
+		top: calc(100vh*(690/1920));
 		z-index: 2;
 		position: absolute;
 		width: 100vw;
+
 	}
+  .play{
+    position:absolute;
+    top:calc(100vh*(900/1920));
+    left:50vw;
+    margin-left:calc(-100vh*(128/1920)/2);
+    // margin-top:calc(-100vh*(128/1920)/2);
+    z-index:9999;
+    background:url('/static/img/play.png') center center no-repeat;
+    background-size:cover;
+    width: calc(100vh*(128/1920));
+    height: calc(100vh*(128/1920));
+  }
 }
 </style>

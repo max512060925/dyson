@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <keep-alive>
+    <keep-alive include="contianer">
       <router-view/>
     </keep-alive>
     <div id="bottom-fixed"> </div>

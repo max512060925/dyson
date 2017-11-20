@@ -1,7 +1,7 @@
 <template>
   <div class="pageThree" v-lazy:background-image="'/static/img/bg.jpg'">
 		<img v-lazy="'/static/img/arrow.png'" class="arrow"/>
-    <div class="p2" v-lazy:background-image="'/static/img/2.png'">
+    <div class="p2">
       <div class="box5" @click="jump(5)"></div>
   		<div class="box6" @click="jump(6)"></div>
   		<div class="box7" @click="jump(7)"></div>
@@ -27,7 +27,6 @@ export default {
 <style lang="stylus" type="stylesheet/stylus">
 .pageThree{
 	position: relative;
-	display: flex;
 	width: 100vw;
 	height: 100vh;
 	background-size:cover;
@@ -36,19 +35,44 @@ export default {
 	overflow: hidden;
   div.p2{
 		position:absolute;
-    width: calc(100vh*(1080/1920));
-    top:50vh;
-    left:50vw;
-    margin-left:calc(-100vh*(1080/1920)/2);
-    margin-top:calc(-100vh*(1718/1920)/2);
-    height: calc(100vh*(1718/1920));
-    background-size:cover;
-  	background-position:bottom center;
-  	background-repeat:no-repeat;
+    background:url('/static/img/2.png') center center no-repeat;
+    background-size:100%;
+  	// background-position:bottom center;
+  	// background-repeat:no-repeat;
 	}
+  @media screen and (max-width: 900px){
+    div.p2{
+      width: calc(100vw*(1061/1081));
+      top:50vh;
+      left:50vw;
+      margin-left:calc(-100vw*(1061/1081)/2);
+      margin-top:calc(-100vh*(1718/1920)/2);
+      height: calc(100vh*(1718/1920));
+  	}
+  }
+  @media screen and (min-width: 899px) and (max-height: 2000px){
+    div.p2{
+      width: calc(100vh*(1061/1920));
+      top:50vh;
+      left:50vw;
+      margin-left:calc(-100vh*(1061/1920)/2);
+      margin-top:calc(-100vh*(1718/1920)/2);
+      height: calc(100vh*(1718/1920));
+  	}
+  }
+  @media screen and (min-width: 899px) and (min-height: 2000px){
+    div.p2{
+      width: calc(100vw*(1061/1081));
+      top:50vh;
+      left:50vw;
+      margin-left:calc(-100vw*(1061/1081)/2);
+      margin-top:calc(-100vh*(1718/1920)/2);
+      height: calc(100vh*(1718/1920));
+  	}
+  }
   .box5{
     position: absolute;
-    top: 100%;
+    top: 0%;
     left: 0;
     width: 100%;
     height: 31%;

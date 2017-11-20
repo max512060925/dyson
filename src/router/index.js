@@ -12,9 +12,7 @@ export default new Router({
       path: '/',
       name: 'contianer',
       component: contianer,
-			meta:{
-				keepAlive:true
-			}
+			mate: { keepAlive: true }
     },
 		{
       path: '/pic',

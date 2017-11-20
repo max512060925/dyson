@@ -1,20 +1,20 @@
 <template>
 <div class="pageFour" v-lazy:background-image="'/static/img/bg.jpg'">
-  <img v-lazy="'/static/img/map.png'" class="map">
-  <img v-lazy="'/static/img/bear.png'" class="bear">
-  <img v-lazy="'/static/img/f6.png'" class="f6"/>
+  <img src="/static/img/map.png" class="map">
+  <img src="/static/img/bear.png" class="bear">
+  <img src="/static/img/f6.png" class="f6"/>
   <img v-lazy="'/static/img/arrow.png'" class="arrow" />
   <div v-if="download">
     <div class="showBox" :style="`top:${imgShowArr[0].top||0};left:${imgShowArr[0].left||0};`" :class="[number%3===0?'show':'',imgShowArr[0].side==='left'?'leftBox':'rightBox']">
-      <img v-lazy="'/static/img/f6.png'" :class="imgShowArr[0].side==='left'?'left':'right'">
+      <img v-lazy="imgShowArr[0].url" :class="imgShowArr[0].side==='left'?'left':'right'">
       <p v-html="imgShowArr[0].text" :class="imgShowArr[0].side==='right'?'mr':''"></p>
     </div>
     <div class="showBox" :style="`top:${imgShowArr[1].top||0};left:${imgShowArr[1].left||0};`" :class="[number%3===1?'show':'',imgShowArr[1].side==='left'?'leftBox':'rightBox']">
-      <img v-lazy="'/static/img/f6.png'" :class="imgShowArr[1].side==='left'?'left':'right'">
+      <img v-lazy="imgShowArr[1].url" :class="imgShowArr[1].side==='left'?'left':'right'">
       <p v-html="imgShowArr[1].text" :class="imgShowArr[1].side==='right'?'mr':''"></p>
     </div>
     <div class="showBox" :style="`top:${imgShowArr[2].top||0};left:${imgShowArr[2].left||0};`" :class="[number%3===2?'show':'',imgShowArr[2].side==='left'?'leftBox':'rightBox']">
-      <img v-lazy="'/static/img/f6.png'" :class="imgShowArr[2].side==='left'?'left':'right'">
+      <img v-lazy="imgShowArr[2].url" :class="imgShowArr[2].side==='left'?'left':'right'">
       <p v-html="imgShowArr[2].text" :class="imgShowArr[2].side==='right'?'mr':''"></p>
     </div>
   </div>
@@ -56,15 +56,12 @@ export default {
   },
   created(){
     axios.get('/static/json/img.json').then(res=>{
-      this.download=true
       this.imgArr=res.data.imgArr
       this.imgShowArr[0]=this.imgArr[0][this.randomIndex(this.imgArr[0].length)]
       this.imgShowArr[1]=this.imgArr[1][this.randomIndex(this.imgArr[1].length)]
       this.imgShowArr[2]=this.imgArr[2][this.randomIndex(this.imgArr[2].length)]
+      this.download=true
     })
-  },
-  mounted() {
-
   },
   destroy() {
     clearInterval(this.interval)

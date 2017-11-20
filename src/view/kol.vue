@@ -36,6 +36,7 @@ export default {
 	},
   mounted() {
     const scroll = new BScroll(this.$refs.kol)
+    this.scroll.refresh();
   }
 }
 </script>
@@ -50,7 +51,7 @@ export default {
   overflow: hidden;
 }
 .next,.prev{
-	position: fixed;
+	position: absolute;
 	top: 2%;
   padding:1%;
 	width: 11%;
@@ -66,52 +67,62 @@ export default {
 
 .kol1{
   width:100vw;
-  heigth:calc(100vw*(9869/1080));
+  height:calc(100vw*(9869/1080));
   background:url('/static/img/Dyson_KOL_1.jpg') top center no-repeat;
+  background-size:cover;
 }
 .kol2{
   width:100vw;
-  heigth:calc(100vw*(9869/1080));
+  height:calc(100vw*(9869/1080));
   background:url('/static/img/Dyson_KOL_2.jpg') top center no-repeat;
+  background-size:cover;
 }
 .kol3{
   width:100vw;
-  heigth:calc(100vw*(11676/1080));
+  height:calc(100vw*(11676/1080));
   background:url('/static/img/Dyson_KOL_3.jpg') top center no-repeat;
+  background-size:cover;
 }
 .kol4{
   width:100vw;
-  heigth:calc(100vw*(9458/1080));
+  height:calc(100vw*(9458/1080));
   background:url('/static/img/Dyson_KOL_4.jpg') top center no-repeat;
+  background-size:cover;
 }
 .kol5{
   width:100vw;
-  heigth:calc(100vw*(13154/1080));
+  height:calc(100vw*(13154/1080));
   background:url('/static/img/Dyson_KOL_5.jpg') top center no-repeat;
+  background-size:cover;
 }
 .kol6{
   width:100vw;
-  heigth:calc(100vw*(12417/1080));
+  height:calc(100vw*(12417/1080));
   background:url('/static/img/Dyson_KOL_6.jpg') top center no-repeat;
+  background-size:cover;
 }
 .kol7{
   width:100vw;
-  heigth:calc(100vw*(9553/1080));
+  height:calc(100vw*(9553/1080));
   background:url('/static/img/Dyson_KOL_7.jpg') top center no-repeat;
+  background-size:cover;
 }
 .kol8{
   width:100vw;
-  heigth:calc(100vw*(11950/1080));
+  height:calc(100vw*(11950/1080));
   background:url('/static/img/Dyson_KOL_8.jpg') top center no-repeat;
+  background-size:cover;
 }
 .kol9{
   width:100vw;
-  heigth:calc(100vw*(13021/1080));
+  height:calc(100vw*(13021/1080));
   background:url('/static/img/Dyson_KOL_9.jpg') top center no-repeat;
+  background-size:cover;
 }
 .kol10{
   width:100vw;
-  heigth:calc(100vw*(13572/1080));
+  height:calc(100vw*(13572/1080));
   background:url('/static/img/Dyson_KOL_10.jpg') top center no-repeat;
+  background-size:cover;
 }
 </style>

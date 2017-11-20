@@ -35,21 +35,13 @@ export default {
 		const mySwiper = new Swiper (this.$refs.swiper, {
 	    direction: 'vertical',
 	    loop: false,
-			setWrapperSize:true,
 			on: {
 		    slideChangeTransitionEnd(){
-					if (this.activeIndex===1) {
-						for (var i = 1; i < 11; i++) {
-				      let img = new Image()
-				      img.src = `/static/img/Dyson_KOL_${i}.jpg`
-				    }
-					}
 					ga('send', 'pageview', `/page${this.activeIndex+1}`);
-		      _this.$store.commit('saveIndex',this.activeIndex);//切换结束时，告诉我现在是第几个slide
+					_this.$store.commit('saveIndex',this.activeIndex);//切换结束时，告诉我现在是第几个slide
 		    },
 		  }
   	})
-		mySwiper.slideTo(this.$store.state.app.index)
   }
 }
 </script>
