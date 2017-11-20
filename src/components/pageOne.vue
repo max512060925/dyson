@@ -4,8 +4,8 @@
     <img v-lazy="'/static/img/f2.png'" class="f2"/>
     <img v-lazy="'/static/img/f1.png'" class="f1"/>
     <img v-lazy="'/static/img/arrow.png'" class="arrow"/>
-	  <video id="video" src="/static/1.mp4" poster="/static/img/video-loadpic.png" @click="play" @touchEnd="play"></video>
-    <div class="play" @click="play" @touchEnd="play" v-show="!isPlay"></div>
+	  <video id="video" src="/static/1.mp4" poster="/static/img/video-loadpic.png" @touchend="play($event)"></video>
+    <div class="play" @touchend="pplay($event)" v-show="!isPlay"></div>
 	</div>
 </template>
 <script type="text/ecmascript-6">
@@ -17,7 +17,8 @@ export default {
     }
   },
   methods:{
-    play(){
+    play(e){
+      console.log(e);
       if (video.paused) {
         this.isPlay=true
         video.play()

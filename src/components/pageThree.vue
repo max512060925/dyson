@@ -40,7 +40,27 @@ export default {
   	// background-position:bottom center;
   	// background-repeat:no-repeat;
 	}
-  @media screen and (max-width: 900px){
+  // @media screen and (max-width: 900px){
+  //   div.p2{
+  //     width: calc(100vw*(1061/1081));
+  //     top:50vh;
+  //     left:50vw;
+  //     margin-left:calc(-100vw*(1061/1081)/2);
+  //     margin-top:calc(-100vh*(1718/1920)/2);
+  //     height: calc(100vh*(1718/1920));
+  // 	}
+  // }
+  @media screen and (max-width: 899px) and (max-height: 2000px){
+    div.p2{
+      width: calc(100vh*(1061/1920));
+      top:50vh;
+      left:50vw;
+      margin-left:calc(-100vh*(1061/1920)/2);
+      margin-top:calc(-100vh*(1718/1920)/2);
+      height: calc(100vh*(1718/1920));
+  	}
+  }
+  @media screen and (max-width: 899px) and (min-height: 2000px){
     div.p2{
       width: calc(100vw*(1061/1081));
       top:50vh;

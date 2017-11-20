@@ -93,7 +93,25 @@ export default {
     background:url('/static/img/1.png') center center no-repeat;
     background-size:100%;
   }
-  @media screen and (max-width: 900px){
+  // @media screen and (max-width: 900px){
+  //   div.p1{
+  // 		position:absolute;
+  //     bottom:5%;
+  //     width:100vw;
+  //     height: calc(100vw*(1131/1080));
+  // 	}
+  // }
+  @media screen and (max-width: 899px) and (max-height: 2000px){
+    div.p1{
+  		position:absolute;
+      bottom:5%;
+      width:calc(100vh*(1080/1920));
+      left:50vw;
+      margin-left:calc(-100vh*(1080/1920)/2);
+      height: calc(100vh*(1131/1920));
+  	}
+  }
+  @media screen and (max-width: 899px) and (min-height: 2000px){
     div.p1{
   		position:absolute;
       bottom:5%;
