@@ -28,23 +28,25 @@ export default {
       scroll:null
     }
   },
+  watch:{
+    id(){
+      this.scroll.destroy()
+      this.$nextTick(()=>{
+        this.scroll= new BScroll(this.$refs.kol)
+      })
+    }
+  },
 	methods: {
 		prev() {
 			if (Number(this.id)!==1) {
         ga('send', 'pageview', `/kol${Number(this.id)-1}`);
 				this.$router.push({ path: 'pic', query: { id: `${Number(this.id)-1}` }})
-        this.$nextTick(()=>{
-          this.scroll.refresh()
-        })
 			}
 		},
 		next() {
 			if (Number(this.id)!==10) {
         ga('send', 'pageview', `/kol${Number(this.id)+1}`);
 				this.$router.push({ path: 'pic', query: { id: `${Number(this.id)+1}` }})
-        this.$nextTick(()=>{
-          this.scroll.refresh()
-        })
 			}
 		}
 	},
