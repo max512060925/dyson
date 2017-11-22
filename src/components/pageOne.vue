@@ -4,7 +4,7 @@
     <img v-lazy="'/static/img/f2.png'" class="f2"/>
     <img v-lazy="'/static/img/f1.png'" class="f1"/>
     <img v-lazy="'/static/img/arrow.png'" class="arrow"/>
-	  <video id="video" src="/static/1.mp4" poster="/static/img/video-loadpic.png" @touchend="play($event)"></video>
+	  <video id="video" src="/static/1.mp4" poster="/static/img/video-loadpic.png" @touchend="play($event)" playsinline webkit-playsinline x-webkit-airplay="true" x5-video-player-type="h5" x5-video-player-type="h5" x5-video-player-fullscreen="true" preload style="object-fit:fill;"></video>
     <div class="play" @touchend="pplay($event)" v-show="!isPlay"></div>
 	</div>
 </template>

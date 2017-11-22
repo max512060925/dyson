@@ -36,7 +36,7 @@ export default {
   div.p2{
 		position:absolute;
     background:url('/static/img/2.png') center center no-repeat;
-    background-size:100%;
+    background-size:cover;
   	// background-position:bottom center;
   	// background-repeat:no-repeat;
 	}
