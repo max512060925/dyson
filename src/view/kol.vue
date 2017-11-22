@@ -3,7 +3,9 @@
     <div class="prev" @click="prev"></div>
     <div class="next" @click="next"></div>
     <div class="content" ref="kol">
-      <div :class="`kol${id}`"/>
+      <div :class="`kol${id}`">
+        <img v-for="(v,i) in imgArr[id-1]" :key="v" :src="`/static/img/${id}/${i}.jpg`" width="100%"/>
+      </div>
     </div>
 	</div>
 </template>
@@ -20,23 +22,34 @@ export default {
 			}
 		}
 	},
+  data() {
+    return {
+      imgArr:[4,4,5,5,6,5,4,5,5,5],
+      scroll:null
+    }
+  },
 	methods: {
 		prev() {
 			if (Number(this.id)!==1) {
         ga('send', 'pageview', `/kol${Number(this.id)-1}`);
 				this.$router.push({ path: 'pic', query: { id: `${Number(this.id)-1}` }})
+        this.$nextTick(()=>{
+          this.scroll.refresh()
+        })
 			}
 		},
 		next() {
 			if (Number(this.id)!==10) {
         ga('send', 'pageview', `/kol${Number(this.id)+1}`);
 				this.$router.push({ path: 'pic', query: { id: `${Number(this.id)+1}` }})
+        this.$nextTick(()=>{
+          this.scroll.refresh()
+        })
 			}
 		}
 	},
   mounted() {
-    const scroll = new BScroll(this.$refs.kol)
-    this.scroll.refresh();
+    this.scroll = new BScroll(this.$refs.kol)
   }
 }
 </script>
@@ -67,62 +80,42 @@ export default {
 
 .kol1{
   width:100vw;
-  height:calc(100vw*(9869/1080));
-  background:url('/static/img/Dyson_KOL_1.jpg') top center no-repeat;
-  background-size:cover;
+  height:calc(100vw*(9770/1080));
 }
 .kol2{
   width:100vw;
-  height:calc(100vw*(9869/1080));
-  background:url('/static/img/Dyson_KOL_2.jpg') top center no-repeat;
-  background-size:cover;
+  height:calc(100vw*(9764/1080));
 }
 .kol3{
   width:100vw;
-  height:calc(100vw*(11676/1080));
-  background:url('/static/img/Dyson_KOL_3.jpg') top center no-repeat;
-  background-size:cover;
+  height:calc(100vw*(11553/1080));
 }
 .kol4{
   width:100vw;
-  height:calc(100vw*(9458/1080));
-  background:url('/static/img/Dyson_KOL_4.jpg') top center no-repeat;
-  background-size:cover;
+  height:calc(100vw*(8617/1080));
 }
 .kol5{
   width:100vw;
-  height:calc(100vw*(13154/1080));
-  background:url('/static/img/Dyson_KOL_5.jpg') top center no-repeat;
-  background-size:cover;
+  height:calc(100vw*(13013/1080));
 }
 .kol6{
   width:100vw;
-  height:calc(100vw*(12417/1080));
-  background:url('/static/img/Dyson_KOL_6.jpg') top center no-repeat;
-  background-size:cover;
+  height:calc(100vw*(12342/1080));
 }
 .kol7{
   width:100vw;
-  height:calc(100vw*(9553/1080));
-  background:url('/static/img/Dyson_KOL_7.jpg') top center no-repeat;
-  background-size:cover;
+  height:calc(100vw*(9290/1080));
 }
 .kol8{
   width:100vw;
-  height:calc(100vw*(11950/1080));
-  background:url('/static/img/Dyson_KOL_8.jpg') top center no-repeat;
-  background-size:cover;
+  height:calc(100vw*(11810/1080));
 }
 .kol9{
   width:100vw;
-  height:calc(100vw*(13021/1080));
-  background:url('/static/img/Dyson_KOL_9.jpg') top center no-repeat;
-  background-size:cover;
+  height:calc(100vw*(12784/1080));
 }
 .kol10{
   width:100vw;
-  height:calc(100vw*(13572/1080));
-  background:url('/static/img/Dyson_KOL_10.jpg') top center no-repeat;
-  background-size:cover;
+  height:calc(100vw*(13480/1080));
 }
 </style>
