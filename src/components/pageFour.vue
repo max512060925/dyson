@@ -6,16 +6,22 @@
   <img v-lazy="'/static/img/arrow.png'" class="arrow" />
   <div v-if="download">
     <div class="showBox" :style="`top:${imgShowArr[0].top||0};left:${imgShowArr[0].left||0};`" :class="[number%3===0?'show':'',imgShowArr[0].side==='left'?'leftBox':'rightBox']">
-      <img v-lazy="imgShowArr[0].url" :class="imgShowArr[0].side==='left'?'left':'right'">
-      <p v-html="imgShowArr[0].text" :class="imgShowArr[0].side==='right'?'mr':''"></p>
+      <a :href="(number%3===0||number%3===1)?imgShowArr[0].link:'#'">
+        <img v-lazy="imgShowArr[0].url" :class="imgShowArr[0].side==='left'?'left':'right'">
+        <p v-html="imgShowArr[0].text" :class="imgShowArr[0].side==='right'?'mr':''"></p>
+      </a>
     </div>
     <div class="showBox" :style="`top:${imgShowArr[1].top||0};left:${imgShowArr[1].left||0};`" :class="[number%3===1?'show':'',imgShowArr[1].side==='left'?'leftBox':'rightBox']">
-      <img v-lazy="imgShowArr[1].url" :class="imgShowArr[1].side==='left'?'left':'right'">
-      <p v-html="imgShowArr[1].text" :class="imgShowArr[1].side==='right'?'mr':''"></p>
+      <a :href="(number%3===1||number%3===2)?imgShowArr[1].link:'#'">
+        <img v-lazy="imgShowArr[1].url" :class="imgShowArr[1].side==='left'?'left':'right'">
+        <p v-html="imgShowArr[1].text" :class="imgShowArr[1].side==='right'?'mr':''"></p>
+      </a>
     </div>
     <div class="showBox" :style="`top:${imgShowArr[2].top||0};left:${imgShowArr[2].left||0};`" :class="[number%3===2?'show':'',imgShowArr[2].side==='left'?'leftBox':'rightBox']">
-      <img v-lazy="imgShowArr[2].url" :class="imgShowArr[2].side==='left'?'left':'right'">
-      <p v-html="imgShowArr[2].text" :class="imgShowArr[2].side==='right'?'mr':''"></p>
+      <a :href="(number%3===2||number%3===0)?imgShowArr[2].link:'#'">
+        <img v-lazy="imgShowArr[2].url" :class="imgShowArr[2].side==='left'?'left':'right'">
+        <p v-html="imgShowArr[2].text" :class="imgShowArr[2].side==='right'?'mr':''"></p>
+      </a>
     </div>
   </div>
 
@@ -38,16 +44,6 @@ export default {
   methods: {
     randomIndex(length) {
       return Math.floor(Math.random() * length)
-    },
-    beforeLeave(){
-
-    },
-    afterLeave() {
-      console.log(2);
-    },
-    afterEnter() {
-      console.log(111);
-      this.imgChange()
     },
     imgChange() {
       this.number++
@@ -141,11 +137,11 @@ export default {
       font-size:calc(100vh*(38/1920));
       color:#fff;
       letter-spacing:calc(100vw*(3/1080));
-      padding:calc(100vh*(15/1920)) calc(100vh*(40/1920));
+      padding:calc(100vh*(15/1920)) calc(100vh*(20/1920));
       line-height:calc(100vh*(50/1920))
     }
     .mr{
-      margin-left:calc(100vh*(70/1920));
+      margin-left:calc(100vh*(80/1920));
     }
   }
   .leftBox{
@@ -155,18 +151,6 @@ export default {
   .rightBox{
     background-image:url('rightBox.png');
     width: calc(100vh*(577/1920));
-  }
-  .img-2{
-    animation-delay:2s;
-  }
-  .img-3{
-    animation-delay:4s;
-  }
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity 6s;
-  }
-  .fade-enter-to, .fade-leave-to /* .fade-leave-active in below version 2.1.8 */ {
-    opacity: 1;
   }
   .show{
     opacity:1;

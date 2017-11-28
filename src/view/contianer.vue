@@ -32,12 +32,20 @@ export default {
 	},
 	mounted() {
 		let _this=this;
+		let index
+		if (sessionStorage.getItem('index')) {
+			index=sessionStorage.getItem('index')
+		}else {
+			index=0
+		}
 		const mySwiper = new Swiper (this.$refs.swiper, {
 	    direction: 'vertical',
+			initialSlide:index,
 	    loop: false,
 			on: {
 		    slideChangeTransitionEnd(){
-					ga('send', 'pageview', `/page${this.activeIndex+1}`);
+					window.ga('send', 'pageview', `/page${this.activeIndex+1}`);
+					sessionStorage.setItem('index', this.activeIndex);
 					_this.$store.commit('saveIndex',this.activeIndex);//切换结束时，告诉我现在是第几个slide
 		    },
 		  }

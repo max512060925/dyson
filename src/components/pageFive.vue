@@ -8,6 +8,7 @@
 	<img src="/static/img/f12.png" class="f12">
 	<img src="/static/img/f13.png" class="f13">
 	<img src="/static/img/fb.png" class="fb">
+	<a href="http://sale.jd.com/act/dIwOXs82YZRj.html"><img src="/static/img/button.png" class="btn"></a>
 </div>
 </template>
 
@@ -93,6 +94,15 @@ export default {
     margin-left:calc(-100vw*(1001/1080)/2);
     width: calc(100vw*(1001/1080));
     height: calc(100vw*(103/1080));
+	}
+	img.btn{
+		position:absolute;
+    display:block;
+    top:calc(100vh*(1600/1920));
+		left: 50vw;
+    margin-left:calc(-100vw*(330/1080)/2);
+    width: calc(100vw*(330/1080));
+    height: calc(100vw*(77/1080));
 	}
 }
 </style>
