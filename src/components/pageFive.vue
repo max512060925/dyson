@@ -19,16 +19,28 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" type="stylesheet/stylus">
+
 .pageFive{
 	position: relative;
 	display: flex;
 	width: 100vw;
 	height: 100vh;
 	background-image:url('/static/img/end.jpg')
-	background-size:cover;
-  background-position:top center;
+  background-position:center center;
   background-repeat:no-repeat;
 	overflow: hidden;
+	@media screen and (max-width: 899px) and (max-height: 2000px){
+		background-size:cover;
+	}
+	@media screen and (max-width: 899px) and (min-height: 2000px){
+		background-size:auto 100%;
+	}
+  @media screen and (min-width: 899px) and (max-height: 2000px){
+		background-size:100%;
+  }
+  @media screen and (min-width: 899px) and (min-height: 2000px){
+		background-size:auto 100%;
+  }
 	img.f7{
 		position:absolute;
     display:block;
@@ -81,10 +93,10 @@ export default {
 	img.f13{
 		position:absolute;
     display:block;
-		bottom:calc(100vh*(170/1920));
+		top:calc(100vh*(1625/1920));
     right:calc(100vw*(30/1080));
-    width: calc(100vw*(235/1080));
-    height: calc(100vw*(85/1080));
+    width: calc(100vh*(235/1920));
+    height: calc(100vh*(85/1920));
 	}
 	img.fb{
 		position:absolute;
@@ -98,7 +110,7 @@ export default {
 	img.btn{
 		position:absolute;
     display:block;
-    top:calc(100vh*(1600/1920));
+    top:calc(100vh*(1625/1920));
 		left: 50vw;
     margin-left:calc(-100vw*(330/1080)/2);
     width: calc(100vw*(330/1080));

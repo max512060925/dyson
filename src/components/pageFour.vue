@@ -6,22 +6,22 @@
   <img v-lazy="'/static/img/arrow.png'" class="arrow" />
   <div v-if="download">
     <div class="showBox" :style="`top:${imgShowArr[0].top||0};left:${imgShowArr[0].left||0};`" :class="[number%3===0?'show':'',imgShowArr[0].side==='left'?'leftBox':'rightBox']">
-      <a :href="(number%3===0||number%3===1)?imgShowArr[0].link:'#'">
+      <!-- <a :href="(number%3===0||number%3===1)?imgShowArr[0].link:'#'"> -->
         <img v-lazy="imgShowArr[0].url" :class="imgShowArr[0].side==='left'?'left':'right'">
         <p v-html="imgShowArr[0].text" :class="imgShowArr[0].side==='right'?'mr':''"></p>
-      </a>
+      <!-- </a> -->
     </div>
     <div class="showBox" :style="`top:${imgShowArr[1].top||0};left:${imgShowArr[1].left||0};`" :class="[number%3===1?'show':'',imgShowArr[1].side==='left'?'leftBox':'rightBox']">
-      <a :href="(number%3===1||number%3===2)?imgShowArr[1].link:'#'">
+      <!-- <a :href="(number%3===1||number%3===2)?imgShowArr[1].link:'#'"> -->
         <img v-lazy="imgShowArr[1].url" :class="imgShowArr[1].side==='left'?'left':'right'">
         <p v-html="imgShowArr[1].text" :class="imgShowArr[1].side==='right'?'mr':''"></p>
-      </a>
+      <!-- </a> -->
     </div>
     <div class="showBox" :style="`top:${imgShowArr[2].top||0};left:${imgShowArr[2].left||0};`" :class="[number%3===2?'show':'',imgShowArr[2].side==='left'?'leftBox':'rightBox']">
-      <a :href="(number%3===2||number%3===0)?imgShowArr[2].link:'#'">
+      <!-- <a :href="(number%3===2||number%3===0)?imgShowArr[2].link:'#'"> -->
         <img v-lazy="imgShowArr[2].url" :class="imgShowArr[2].side==='left'?'left':'right'">
         <p v-html="imgShowArr[2].text" :class="imgShowArr[2].side==='right'?'mr':''"></p>
-      </a>
+      <!-- </a> -->
     </div>
   </div>
 

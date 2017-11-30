@@ -82,7 +82,7 @@ export default {
 
 .kol1{
   width:100vw;
-  height:calc(100vw*(9770/1080));
+  height:calc(100vw*(12784/1080));
 }
 .kol2{
   width:100vw;
@@ -114,7 +114,7 @@ export default {
 }
 .kol9{
   width:100vw;
-  height:calc(100vw*(12784/1080));
+  height:calc(100vw*(9770/1080));
 }
 .kol10{
   width:100vw;
