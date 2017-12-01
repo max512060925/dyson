@@ -93,19 +93,18 @@ export default {
 	img.f13{
 		position:absolute;
     display:block;
-		top:calc(100vh*(1625/1920));
+		top:calc(100vh*(1750/1920));
     right:calc(100vw*(30/1080));
-    width: calc(100vh*(235/1920));
-    height: calc(100vh*(85/1920));
+    width: calc(100vh*(305/1920));
+    height: calc(100vh*(109/1920));
 	}
 	img.fb{
 		position:absolute;
     display:block;
     bottom:calc(100vh*(25/1920));
-		left: 50vw;
-    margin-left:calc(-100vw*(1001/1080)/2);
-    width: calc(100vw*(1001/1080));
-    height: calc(100vw*(103/1080));
+		left: calc(100vw*(30/1080));;
+    width: calc(100vw*(187/1080));
+    height: calc(100vw*(19/1080));
 	}
 	img.btn{
 		position:absolute;
