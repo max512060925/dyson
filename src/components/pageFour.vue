@@ -117,7 +117,7 @@ export default {
     background-position:bottom center;
     background-repeat:no-repeat;
     opacity: 0;
-    transition: all 6s
+    transition: opacity 6s;
     img {
       position:absolute;
       display:block;
@@ -137,8 +137,10 @@ export default {
       font-size:calc(100vh*(38/1920));
       color:#fff;
       letter-spacing:calc(100vw*(3/1080));
-      padding:calc(100vh*(15/1920)) calc(100vh*(20/1920));
-      line-height:calc(100vh*(50/1920))
+      padding:calc(100vh*(15/1920)) calc(100vh*(15/1920));
+      line-height:calc(100vh*(50/1920));
+      width:calc(100vh*(492/1920));
+      box-sizing: border-box;
     }
     .mr{
       margin-left:calc(100vh*(80/1920));
