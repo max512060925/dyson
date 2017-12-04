@@ -144,21 +144,22 @@ export default {
     }
     p {
       position:absolute;
-      font-size:calc(100vh*(38/1920));
+      font-size:calc(100vh*(30/1920));
       color:#fff;
       letter-spacing:calc(100vw*(3/1080));
-      padding:calc(100vh*(15/1920)) calc(100vh*(15/1920));
+      padding:calc(100vh*(15/1920)) calc(100vh*(20/1920));
       line-height:calc(100vh*(50/1920));
       width:calc(100vh*(492/1920));
       box-sizing: border-box;
+      font-weight:bold;
     }
     .mr{
-      margin-left:calc(100vh*(80/1920));
+      margin-left:calc(100vh*(90/1920));
     }
   }
   .leftBox{
     background-image:url('leftBox.png');
-    width: calc(100vh*(601/1920));
+    width: calc(100vh*(577/1920));
   }
   .rightBox{
     background-image:url('rightBox.png');
