@@ -2,7 +2,9 @@
 <div class="pageFour" v-lazy:background-image="'/static/img/bg.jpg'">
   <img src="/static/img/map.png" class="map">
   <img src="/static/img/bear.png" class="bear">
+  <img src="/static/img/lion.png" class="lion">
   <img src="/static/img/f6.png" class="f6"/>
+  <img src="/static/img/f13.png" class="f13">
   <img v-lazy="'/static/img/arrow.png'" class="arrow" />
   <div v-if="download">
     <div class="showBox" :style="`top:${imgShowArr[0].top||0};left:${imgShowArr[0].left||0};`" :class="[number%3===0?'show':'',imgShowArr[0].side==='left'?'leftBox':'rightBox']">
@@ -106,8 +108,16 @@ export default {
     display:block;
     bottom:0;
     left: 0;
-    width: calc(100vh*(862/1920));
+    width: calc(100vh*(509/1920));
     height: calc(100vh*(467/1920));
+  }
+  img.lion{
+    position:absolute;
+    display:block;
+    top:calc(100vh*(1600/1920));
+    right: calc(100vw*(115/1080));
+    width: calc(100vh*(161/1920));
+    height: calc(100vh*(88/1920));
   }
   .showBox{
     position:absolute;
@@ -154,6 +164,14 @@ export default {
     background-image:url('rightBox.png');
     width: calc(100vh*(577/1920));
   }
+  img.f13{
+		position:absolute;
+    display:block;
+		top:calc(100vh*(1750/1920));
+    right:calc(100vw*(30/1080));
+    width: calc(100vh*(305/1920));
+    height: calc(100vh*(109/1920));
+	}
   .show{
     opacity:1;
   }
