@@ -8,13 +8,22 @@
 	<img src="/static/img/f12.png" class="f12">
 	<img src="/static/img/f13.png" class="f13">
 	<img src="/static/img/fb.png" class="fb">
-	<a href="http://sale.jd.com/act/dIwOXs82YZRj.html"><img src="/static/img/button.png" class="btn"></a>
+	<a :href="href"><img src="/static/img/button.png" class="btn"></a>
 </div>
 </template>
 
 <script type="text/ecmascript-6">
+import axios from 'axios'
 export default {
-	name: 'pageFive'
+	name: 'pageFive',
+	data(){
+		return href:''
+	},
+	created(){
+    axios.get('/static/json/http.json').then(res=>{
+      this.href=res.data.link
+    })
+  }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -4,18 +4,25 @@
     <img v-lazy="'/static/img/f2.png'" class="f2"/>
     <img v-lazy="'/static/img/f1.png'" class="f1"/>
     <img v-lazy="'/static/img/arrow.png'" class="arrow"/>
-    <video id="video" src="/static/1.mp4" poster="/static/img/video-loadpic.png" @touchend="play($event)" preload></video>
+    <video id="video" :src="src" poster="/static/img/video-loadpic.png" @touchend="play($event)" preload></video>
 	  <!-- <video id="video" src="/static/1.mp4" poster="/static/img/video-loadpic.png" @touchend="play($event)" playsinline webkit-playsinline x-webkit-airplay="true" x5-video-player-type="h5" x5-video-player-fullscreen="true" preload style="object-fit:fill;"></video> -->
     <div class="play" @touchend="play($event)" v-show="!isPlay"></div>
 	</div>
 </template>
 <script type="text/ecmascript-6">
+import axios from 'axios'
 export default {
   name: 'pageOne',
   data(){
     return {
       isPlay:true
+      src:''
     }
+  },
+  created(){
+    axios.get('/static/json/http.json').then(res=>{
+      this.src=res.data.video
+    })
   },
   methods:{
     play(e){
@@ -54,12 +61,10 @@ export default {
 				img.src = `/static/img/Dyson_KOL_${i}.jpg`
 			}
 		}
-    console.log();
   }
 
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" type="stylesheet/stylus">
 .pageOne{
