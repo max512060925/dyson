@@ -15,7 +15,7 @@ export default {
   name: 'pageOne',
   data(){
     return {
-      isPlay:true
+      isPlay:true,
       src:''
     }
   },

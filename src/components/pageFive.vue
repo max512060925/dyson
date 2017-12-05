@@ -17,7 +17,9 @@ import axios from 'axios'
 export default {
 	name: 'pageFive',
 	data(){
-		return href:''
+		return {
+			href:''
+		}
 	},
 	created(){
     axios.get('/static/json/http.json').then(res=>{
