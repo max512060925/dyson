@@ -24,7 +24,7 @@ export default {
 	},
   data() {
     return {
-      imgArr:[4,4,5,5,6,5,4,5,5,5],
+      imgArr:[5,4,5,5,6,5,4,5,5,5],
       scroll:null
     }
   },
