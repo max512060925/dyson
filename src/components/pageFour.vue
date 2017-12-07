@@ -89,7 +89,7 @@ export default {
 		position:absolute;
     display:block;
     top:50vh;
-    margin-top:calc(-100vw*(1667/1080)/2);
+    margin-top:calc(-100vw*(1790/1080)/2);
     left:0;
     width: 100vw;
     // height: calc(100vh*(1667/1920));
