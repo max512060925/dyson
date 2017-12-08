@@ -1,6 +1,6 @@
 <template>
 <div class="pageFour" v-lazy:background-image="'/static/img/bg.jpg'">
-  <img src="/static/img/map.png" class="map">
+  <img src="./map.png" class="map">
   <img src="/static/img/bear.png" class="bear">
   <img src="/static/img/lion.png" class="lion">
   <img src="/static/img/f6.png" class="f6"/>
@@ -89,7 +89,7 @@ export default {
 		position:absolute;
     display:block;
     top:50vh;
-    margin-top:calc(-100vw*(1667/1080)/2);
+    margin-top:calc(-100vw*(1680/1080)/2);
     left:0;
     width: 100vw;
     // height: calc(100vh*(1667/1920));
